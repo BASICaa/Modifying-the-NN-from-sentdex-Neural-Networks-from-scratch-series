@@ -82,12 +82,12 @@ batch_size = 100
 
 for frame in range(100000):
     for batch_start in range(0, len(X), batch_size):
-        dense_1.weights += 0.05 + np.random.randn(2, 5)
-        dense_1.biases += 0.05 + np.random.randn(1, 5)
-        dense_2.weights += 0.05 + np.random.randn(5, 5)
-        dense_2.biases += 0.05 + np.random.randn(1, 5)
-        dense_3.weights += 0.05 + np.random.randn(5, 3)
-        dense_3.biases += 0.05 + np.random.randn(1, 3)
+        dense_1.weights = 0.05 + np.random.randn(2, 5)
+        dense_1.biases = 0.05 + np.random.randn(1, 5)
+        dense_2.weights = 0.05 + np.random.randn(5, 5)
+        dense_2.biases = 0.05 + np.random.randn(1, 5)
+        dense_3.weights = 0.05 + np.random.randn(5, 3)
+        dense_3.biases = 0.05 + np.random.randn(1, 3)
     
         dense_1.forward(X)
         activation_1.forward(dense_1.output)

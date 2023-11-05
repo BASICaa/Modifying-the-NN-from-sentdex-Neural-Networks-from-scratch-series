@@ -84,12 +84,12 @@ def update(frame):
     #becuase of amount of time the processing consumed by batching it, it took alot less but still it is slow
     for batch_start in range(0, len(X), batch_size):
 	    #generating weights and biases randomly
-        dense_1.weights += 0.05 + np.random.randn(2, 5)
-        dense_1.biases += 0.05 + np.random.randn(1, 5)
-        dense_2.weights += 0.05 + np.random.randn(5, 5)
-        dense_2.biases += 0.05 + np.random.randn(1, 5)
-        dense_3.weights += 0.05 + np.random.randn(5, 3)
-        dense_3.biases += 0.05 + np.random.randn(1, 3)
+        dense_1.weights = 0.05 + np.random.randn(2, 5)
+        dense_1.biases = 0.05 + np.random.randn(1, 5)
+        dense_2.weights = 0.05 + np.random.randn(5, 5)
+        dense_2.biases = 0.05 + np.random.randn(1, 5)
+        dense_3.weights = 0.05 + np.random.randn(5, 3)
+        dense_3.biases = 0.05 + np.random.randn(1, 3)
         #getting activation
         dense_1.forward(X)
         activation_1.forward(dense_1.output)
